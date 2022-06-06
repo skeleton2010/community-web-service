@@ -20,7 +20,9 @@ function login() {
     })
     .then((res) => res.json())
     .then((res) => {
-        if (res.success) {
+        if (res.admin) {
+            location.href = '/admin';
+        } else if (res.success) {
             location.href = '/';
         } else {
             alert(res.msg);

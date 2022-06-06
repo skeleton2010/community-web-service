@@ -10,9 +10,9 @@ class User {
         const body = this.body;
         const {id, pw} = UserStorge.getUserInfo(body.id);
         if (id) {
-            /* if (id === process.env.ID_SKELETON || id === process.env.ID_ADMIN && pw === body.pw) {
+            if (id === process.env.ID1 || id === process.env.ID2 && pw === body.pw) {
                 return { admin: true};
-            } else  */if (id === body.id && pw === body.pw) {
+            } else if (id === body.id && pw === body.pw) {
                 return { success: true};
             }
             return { success: false, msg: "비밀번호가 틀렸습니다."};
