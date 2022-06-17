@@ -1,31 +1,29 @@
 "use strict";
 
-class UserStorge {
-    static #users = {
-        id: ["skeleton", "admin", "guest"],
-        email: ["skeleton", "admin", "guest"],
-        pw: ['skeleton', 'admin', 'guest'],
-    };
+const db = require("../config/db");
 
-    static getusers(...args) {
-        const users = this.#users;
-        const newUsers = args.reduce((newUsers, args) => {
-            if (users.hasOwnProperty(args)) {
-                newUsers[args] = users[args];
-            }
-            return newUsers;
-        }, {});
-        return newUsers;
-    }
+class UserStorge {
+    //static getUser(...fields) {
+    //}
 
     static getUserInfo(id) {
-        const users = this.#users;
-        const idx = users.id.indexOf(id);
-        const userInfo = Object.keys(users).reduce((newUser, info) => {
-            newUser[info] = users[info][idx];
-            return newUser;
-        }, {});
-        return userInfo;
+        return new Promise((resolve, reject) => {
+            const query = "SELECT * FROM users WHERE id = ?;";
+            db.query(query, [id], (err, data) => {
+                if (err) reject(`${err}`);
+                else resolve(data[0]);
+            });
+        }); 
+    }
+
+    static async save(usersInfo) {
+        return new Promise((resolve, reject) => {
+            const query = "INSERT INTO users(id, email, pw) VALUES(?,?,?);";
+            db.query(query, [usersInfo.id, usersInfo.email, usersInfo.pw], (err) => {
+                if (err) reject(`${err}`);
+                resolve({ successs: true });
+            });
+        });
     }
 }
 

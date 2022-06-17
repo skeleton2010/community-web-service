@@ -1,5 +1,4 @@
-/* Copyright (c) 2022 by Aigars Silkalns (https://codepen.io/colorlib/pen/rxddKy) */
-
+ /* Copyright (c) 2022 by Aigars Silkalns (https://codepen.io/colorlib/pen/rxddKy)  */
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
 .login-page {
@@ -28,13 +27,14 @@
   box-sizing: border-box;
   font-size: 14px;
 }
-.form button {
+.form #button {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
   background: #4CAF50;
-  width: 100%;
+  width: 80%;
   border: 0;
+  margin: 0 auto;
   padding: 15px;
   color: #FFFFFF;
   font-size: 14px;
@@ -42,7 +42,7 @@
   transition: all 0.3 ease;
   cursor: pointer;
 }
-.form button:hover,.form button:active,.form button:focus {
+.form #button:hover,.form #button:active,.form #button:focus {
   background: #43A047;
 }
 .form .message {
@@ -92,9 +92,54 @@
 }
 body {
   background: #76b852; /* fallback for old browsers */
-  background: rgb(141,194,111);
+   background: rgb(141,194,111);
   background: linear-gradient(90deg, rgba(141,194,111,1) 0%, rgba(118,184,82,1) 50%);
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;      
+} 
+.form .msg {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
 }
+.form .msg a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+.forget {
+  /* display: none; */
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto; 
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  overflow: hidden;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100hv;
+  background: linear-gradient(to bottom, #f1f4f9, #dff1ff);
+}
+
+section .color {
+  position: absolute;
+}
+section .color:nth-child(1) {
+  top: -350px;
+  width: 600px; 
+  height: 600px;
+  background: #ff359b;
+} */

@@ -1,0 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.login .top li label { display: inline-block; width: 63px; font-size: 11px; color: #464646; font-weight: bold; font-family: Arial;}
+.login .top li input[type="text"],
+.login .top li input[type="password"] { width: 144px; height: 29px; padding: 0;}

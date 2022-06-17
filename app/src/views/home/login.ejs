@@ -7,20 +7,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/home/login.css">
+    <!-- <style>
+      .login-form {
+        width: 360px;
+        padding: 8% 0 0;
+        margin: auto;
+        background-color: aqua;
+      }
+      body {
+        background-color: white;
+      }
+    </style> -->
     <script src="/js/home/login.js" defer></script>
-    <script src="js/home/moving.js"></script>
-    <title>dev</title>
-</head>
+    <title>home</title>
+</head> 
 <body>
-    <div class="login-page">
+      <div class="login-page">
         <div class="form">
           <form class="login-form">
-            <input id="id"type="text" placeholder="아이디"/>
-            <input id="pw" type="password" placeholder="비밀번호"/>
-            <button>login</button>
-            <p class="message">Not registered? <a href="http://skeleton.n-e.kr:3000/register">Create an account</a></p>
+            <input id="id" type="text" placeholder="아이디"/><br>
+            <input id="pw" type="password" placeholder="비밀번호"/><br>
+            <p id="button">login</p>
+            <p class="msg">Forget password? <a href="/ForgetPassword">Find your password</a></p>
+            <p class="message">Not registered? <a href="/register">Create an account</a></p>
           </form>
         </div>
-      </div>
+      </div> 
+    <!-- <section>
+      <div class="color"></div>
+      <div class="color"></div>
+      <div class="color"></div>
+    </section> -->
 </body>
 </html>

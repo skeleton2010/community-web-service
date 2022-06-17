@@ -1,0 +1,5 @@
+{
+    "id": ["skeleton", "admin", "guest"],
+    "email": ["skeleton", "admin", "guest"],
+    "pw": ["skeleton", "admin", "guest"]
+}
