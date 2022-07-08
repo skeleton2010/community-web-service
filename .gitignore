@@ -1,3 +1,5 @@
+#html
+**/.html
 # databases
 ./app/src/database/user.json
 
